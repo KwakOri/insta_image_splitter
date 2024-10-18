@@ -20,7 +20,10 @@ const ImageGrid = ({ imageUrls }: ImageGridProps) => {
           {imageUrls.map((url, index) => (
             <>
               {downloadedImages.includes(index) ? (
-                <div key={index} className="relative border border-white">
+                <div
+                  key={index}
+                  className="w-full aspect-square relative border border-white"
+                >
                   <div className="absolute z-10 w-full h-full flex justify-center items-center">
                     <div className="absolute z-20">
                       <FaCheckCircle fill={"white"} size={80} />

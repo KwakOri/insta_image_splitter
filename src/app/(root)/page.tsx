@@ -2,7 +2,7 @@ import ImageContainer from "@/components/ImageContainer/ImageContainer";
 
 export default function Home() {
   return (
-    <main className="h-screen w-full flex justify-center items-center">
+    <main className="min-h-screen h-full w-full flex justify-center items-center bg-[#2d2d2d]">
       <ImageContainer />
     </main>
   );
