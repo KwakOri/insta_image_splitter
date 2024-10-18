@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useState } from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import { TImageUrls } from "../types";
@@ -26,7 +27,8 @@ const ImageGrid = ({ imageUrls }: ImageGridProps) => {
                     </div>
                     <div className="absolute w-full h-full bg-black opacity-50"></div>
                   </div>
-                  <img
+                  <Image
+                    fill
                     className="w-full"
                     src={url}
                     alt={`Piece ${index + 1}`}
@@ -36,10 +38,15 @@ const ImageGrid = ({ imageUrls }: ImageGridProps) => {
                 <div
                   onClick={() => updateDownloadedImages(index)}
                   key={index}
-                  className="border border-white"
+                  className="w-full aspect-square relative border border-white"
                 >
-                  <a href={url} download={`piece_${index + 1}.png`}>
-                    <img
+                  <a
+                    className="w-full h-full"
+                    href={url}
+                    download={`piece_${index + 1}.png`}
+                  >
+                    <Image
+                      fill
                       className="w-full"
                       src={url}
                       alt={`Piece ${index + 1}`}
