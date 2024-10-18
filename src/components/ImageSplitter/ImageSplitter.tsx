@@ -4,7 +4,7 @@ import { useImage } from "@/contexts/Image.context";
 import { useEffect, useState } from "react";
 import Button from "../shared/Button";
 import ImageGrid from "./ImageGrid";
-import { downloadAllImages } from "./utils";
+import { downloadAllImagesTest } from "./utils";
 
 function ImageSplitter() {
   const [imageUrls, setImageUrls] = useState<string[]>([]);
@@ -51,7 +51,7 @@ function ImageSplitter() {
   return (
     <>
       <ImageGrid imageUrls={imageUrls} />
-      <Button onClick={() => downloadAllImages(imageUrls)}>
+      <Button onClick={() => downloadAllImagesTest(imageUrls)}>
         한 번에 다운받기
       </Button>
       <Button onClick={back}>다시 자르기</Button>

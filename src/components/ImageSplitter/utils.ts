@@ -21,3 +21,16 @@ export const downloadAllImages = async (imageUrls: string[]) => {
     saveAs(content, "images.zip");
   });
 };
+
+export const downloadAllImagesTest = (imageUrls: string[]) => {
+  imageUrls.forEach((imageUrl, i) => {
+    const anchorElement = document.createElement("a");
+    document.body.appendChild(anchorElement);
+    anchorElement.download = `image_${i + 1}`; // a tag에 download 속성을 줘서 클릭할 때 다운로드가 일어날 수 있도록 하기
+    anchorElement.href = imageUrl; // href에 url 달아주기
+
+    anchorElement.click(); // 코드 상으로 클릭을 해줘서 다운로드를 트리거
+
+    document.body.removeChild(anchorElement); // cleanup - 쓰임을 다한 a 태그 삭제
+  });
+};
