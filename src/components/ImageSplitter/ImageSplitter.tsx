@@ -4,11 +4,7 @@ import { useImage } from "@/contexts/Image.context";
 import { useEffect, useState } from "react";
 import Button from "../shared/Button";
 import ImageGrid from "./ImageGrid";
-import {
-  downloadAllImagesAtDesktop,
-  downloadAllImagesWithBase64,
-  downloadAllImagesWithBlob,
-} from "./utils";
+import { downloadAllImagesAtDesktop, downloadAllImagesWithBlob } from "./utils";
 
 function ImageSplitter() {
   const [imageUrls, setImageUrls] = useState<string[]>([]);
@@ -56,16 +52,13 @@ function ImageSplitter() {
     <>
       <ImageGrid imageUrls={imageUrls} />
       <Button onClick={() => downloadAllImagesWithBlob(imageUrls)}>
-        ZIP으로 압축해서 다운받기(blob)
-      </Button>
-      <Button onClick={() => downloadAllImagesWithBase64(imageUrls)}>
-        ZIP으로 압축해서 다운받기(base64)
+        ZIP으로 압축해서 다운받기
       </Button>
       <Button onClick={() => downloadAllImagesAtDesktop(imageUrls)}>
         PNG로 한 번에 다운받기(Desktop Only)
       </Button>
       <p className="text-white mt-4">
-        PNG로 한 번에 다운받기는 모바일에서 작동하지 않습니다.
+        &quot;PNG로 한 번에 다운받기&quot;는 모바일에서 작동하지 않습니다.
       </p>
 
       <Button onClick={back}>다시 자르기</Button>
