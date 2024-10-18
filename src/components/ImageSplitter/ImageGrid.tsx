@@ -22,7 +22,7 @@ const ImageGrid = ({ imageUrls }: ImageGridProps) => {
                 <div key={index} className="relative border border-white">
                   <div className="absolute z-10 w-full h-full flex justify-center items-center">
                     <div className="absolute z-20">
-                      <FaCheckCircle fill={"white"} size={100} />
+                      <FaCheckCircle fill={"white"} size={80} />
                     </div>
                     <div className="absolute w-full h-full bg-black opacity-50"></div>
                   </div>
