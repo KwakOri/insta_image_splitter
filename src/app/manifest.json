@@ -1,0 +1,24 @@
+{
+  "short_name": "IIS",
+  "name": "Insta-Image-Splitter",
+  "theme_color": "#2d2d2d",
+  "background_color": "#2d2d2d",
+  "id": "Insta-Image-Splitter",
+  "description": "Insta-Image-Splitter",
+  "display": "standalone",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/icons/pwa-icons/192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icons/pwa-icons/512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ]
+}
